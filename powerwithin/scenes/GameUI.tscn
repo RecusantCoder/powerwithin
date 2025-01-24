@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cor6dyqjirvfx"]
+
+[ext_resource type="Script" path="res://scripts/GameUI.gd" id="1_i7t7v"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i7t7v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelEnergy" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "energy"
+
+[node name="LabelDeckCount" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "deck count"
+
+[node name="LabelDiscardPileCount" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "discard pile count"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_top = 348.0
+offset_right = 40.0
+offset_bottom = 388.0
+
+[node name="ButtonEndTurn" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
