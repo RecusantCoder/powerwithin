@@ -23,8 +23,8 @@ func initialize_deck(card_loader: CardLoader):
 # Shuffle the deck using Godot's built-in shuffle method
 	
 func shuffle_deck() -> void:
-	print("Shuffling the deck...")
 	print("Deck before shuffle:", get_deck_names())
+	print("Shuffling the deck...")
 	deck.shuffle()
 	print("Deck shuffled:", get_deck_names())
 
@@ -39,7 +39,7 @@ func draw_cards(amount: int) -> void:
 			var drawn_card = deck.pop_front()
 			hand.append(drawn_card)
 			print("Drew card:", drawn_card.name)
-	print("Current hand:", get_deck_names())
+	print("Current hand: \n\n ", get_hand_names())
 
 # Reshuffle the discard pile back into the deck
 func reshuffle_discard_pile() -> void:
@@ -52,7 +52,7 @@ func reshuffle_discard_pile() -> void:
 func play_card(card_index: int) -> void:
 	if card_index >= 0 and card_index < hand.size():
 		var card = hand[card_index]
-		hand.remove_at(card_index)  # Corrected method
+		hand.remove_at(card_index)
 		discard_pile.append(card)
 		print("Played card:", card.name)
 		apply_card_effect(card)
@@ -75,11 +75,24 @@ func apply_card_effect(card: Card) -> void:
 func get_deck_names() -> String:
 	var names = []
 	for card in deck:
-		names.append(card.name)  # Replace 'name' with any property you want to display
+		names.append(card.name)
 	# Convert the array into a string with commas separating the card names
 	var result = ""
 	for i in range(names.size()):
 		result += names[i]
 		if i < names.size() - 1:
 			result += ", "
+	return result
+	
+	# Helper function to print card names in hand
+func get_hand_names() -> String:
+	var names = []
+	for card in hand:
+		names.append(card.get_card_info())
+	# Convert the array into a string with commas separating the card names
+	var result = ""
+	for i in range(names.size()):
+		result += names[i]
+		if i < names.size() - 1:
+			result += " "
 	return result

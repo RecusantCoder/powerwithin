@@ -1,116 +1,218 @@
 [
   {
-	"id": "card001",
-	"name": "Lightning Bolt",
-	"type": "Attack",
+	"name": "Boost I",
+	"cost": 1,
+	"effects": [
+	  {
+		"type": "power",
+		"value": 1
+	  }
+	]
+  },
+  {
+	"name": "Boost II",
 	"cost": 2,
-	"effect": "Deal 6 damage to one enemy.",
-	"attributes": {
-	  "damage": 6
-	},
-	"keywords": []
+	"effects": [
+	  {
+		"type": "power",
+		"value": 2
+	  }
+	]
   },
   {
-	"id": "card002",
-	"name": "Chain Lightning",
-	"type": "Attack",
+	"name": "Boost III",
 	"cost": 3,
-	"effect": "Deal 4 damage to two random enemies.",
-	"attributes": {
-	  "damage": 4,
-	  "targets": 2
-	},
-	"keywords": ["AOE"]
+	"effects": [
+	  {
+		"type": "power",
+		"value": 3
+	  }
+	]
   },
   {
-	"id": "card003",
-	"name": "Static Charge",
-	"type": "Energy",
-	"cost": 0,
-	"effect": "Gain 2 energy.",
-	"attributes": {
-	  "energyGain": 2
-	},
-	"keywords": []
+	"name": "Spark I",
+	"cost": 1,
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 5
+	  }
+	]
   },
   {
-	"id": "card004",
-	"name": "Arcane Repair",
-	"type": "Stabilization",
+	"name": "Spark II",
+	"cost": 2,
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 10
+	  }
+	]
+  },
+  {
+	"name": "Spark III",
 	"cost": 3,
-	"effect": "Increase portal stability by 3% and heal 2 HP.",
-	"attributes": {
-	  "stabilityGain": 3,
-	  "heal": 2
-	},
-	"keywords": []
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 15
+	  }
+	]
   },
   {
-	"id": "card005",
-	"name": "Energy Shield",
-	"type": "Utility",
+	"name": "Synapse I",
+	"cost": 1,
+	"effects": [
+	  {
+		"type": "draw",
+		"value": 1
+	  }
+	]
+  },
+  {
+	"name": "Synapse II",
+	"cost": 2,
+	"effects": [
+	  {
+		"type": "draw",
+		"value": 2
+	  }
+	]
+  },
+  {
+	"name": "Synapse III",
 	"cost": 3,
-	"effect": "Block 6 damage.",
-	"attributes": {
-	  "block": 6
-	},
-	"keywords": []
+	"effects": [
+	  {
+		"type": "draw",
+		"value": 3
+	  }
+	]
   },
   {
-	"id": "card006",
-	"name": "Overload Surge",
-	"type": "Energy",
-	"cost": 0,
-	"effect": "Gain 4 energy but take 2 damage.",
-	"attributes": {
-	  "energyGain": 4,
-	  "selfDamage": 2
-	},
-	"keywords": []
+	"name": "Synaptic Shock I",
+	"cost": 2,
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 5
+	  },
+	  {
+		"type": "draw",
+		"value": 1
+	  }
+	]
   },
   {
-	"id": "card007",
-	"name": "Arcing Blast",
-	"type": "Attack",
+	"name": "Synaptic Shock II",
+	"cost": 3,
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 10
+	  },
+	  {
+		"type": "draw",
+		"value": 2
+	  }
+	]
+  },
+  {
+	"name": "Synaptic Shock III",
 	"cost": 4,
-	"effect": "Deal 5 damage to all enemies.",
-	"attributes": {
-	  "damage": 5,
-	  "targets": "all"
-	},
-	"keywords": ["AOE"]
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 15
+	  },
+	  {
+		"type": "draw",
+		"value": 3
+	  }
+	]
   },
   {
-	"id": "card008",
-	"name": "Energy Conduit",
-	"type": "Stabilization",
+	"name": "Boosted Synapse I",
+	"cost": 2,
+	"effects": [
+	  {
+		"type": "power",
+		"value": 1
+	  },
+	  {
+		"type": "draw",
+		"value": 1
+	  }
+	]
+  },
+  {
+	"name": "Boosted Synapse II",
+	"cost": 3,
+	"effects": [
+	  {
+		"type": "power",
+		"value": 2
+	  },
+	  {
+		"type": "draw",
+		"value": 2
+	  }
+	]
+  },
+  {
+	"name": "Boosted Synapse III",
 	"cost": 4,
-	"effect": "Increase portal stability by 5%.",
-	"attributes": {
-	  "stabilityGain": 5
-	},
-	"keywords": []
+	"effects": [
+	  {
+		"type": "power",
+		"value": 3
+	  },
+	  {
+		"type": "draw",
+		"value": 3
+	  }
+	]
   },
   {
-	"id": "card009",
-	"name": "Discharge",
-	"type": "Utility",
+	"name": "Shocking Boost I",
 	"cost": 2,
-	"effect": "Remove 1 negative status effect.",
-	"attributes": {
-	  "statusRemoval": 1
-	},
-	"keywords": []
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 5
+	  },
+	  {
+		"type": "power",
+		"value": 1
+	  }
+	]
   },
   {
-	"id": "card010",
-	"name": "Mana Pulse",
-	"type": "Utility",
-	"cost": 2,
-	"effect": "Draw 2 cards.",
-	"attributes": {
-	  "cardDraw": 2
-	},
-	"keywords": []
+	"name": "Shocking Boost II",
+	"cost": 3,
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 10
+	  },
+	  {
+		"type": "power",
+		"value": 2
+	  }
+	]
+  },
+  {
+	"name": "Shocking Boost III",
+	"cost": 4,
+	"effects": [
+	  {
+		"type": "damage",
+		"value": 15
+	  },
+	  {
+		"type": "power",
+		"value": 3
+	  }
+	]
   }
 ]

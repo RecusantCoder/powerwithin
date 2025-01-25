@@ -9,8 +9,9 @@ var turn_number: int = 1  # To track the game turn
 
 func _ready():
 	add_child(ui)  # Add the UI to the scene
-	# Connect the signal from GameUI to MainGameplay
+	# Connections
 	ui.card_played.connect(self._on_card_played)
+	ui.end_turn_pressed.connect(self.end_turn)
 	# Initialize the card loader and deck manager
 	card_loader = CardLoader.new()
 	card_loader.load_cards()
@@ -27,7 +28,6 @@ func start_player_turn():
 	print("New turn begins! Energy reset to", current_energy)
 	deck_manager.draw_cards(deck_manager.max_hand_size)
 	ui.update_ui(current_energy, deck_manager.deck.size(), deck_manager.discard_pile.size(), deck_manager.hand)
-	print("Your hand:", deck_manager.get_deck_names())
 
 # Play a card
 func play_card(card_index: int):

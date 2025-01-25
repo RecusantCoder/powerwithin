@@ -26,13 +26,18 @@ func load_cards():
 			var parsed_data = json.get_data()  # Get the parsed data (it will be a Dictionary or Array)
 			for card_data in parsed_data:
 				var card = Card.new()  # Create a new Card instance
-				card.id = card_data["id"]
 				card.name = card_data["name"]
-				card.type = card_data["type"]
 				card.cost = card_data["cost"]
-				card.effect = card_data["effect"]
-				card.attributes = card_data["attributes"]
-				card.keywords = card_data["keywords"]
+				
+				# Handle effects as an array of dictionaries
+				card.effects.clear()  # Clear any existing effects
+				for effect_data in card_data["effects"]:
+					var effect = {
+						"type": effect_data["type"],
+						"value": effect_data["value"]
+					}
+					card.effects.append(effect)  # Add the effect to the card's effects array
+				
 				cards.append(card)  # Add the card to the cards array
 				print("Loaded card:", card.name)
 		else:
